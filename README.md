@@ -9,6 +9,15 @@ A full-stack personal finance dashboard built with React, Node.js, PostgreSQL, D
 - Visualized financial reports using Chart.js
 - Deployed with Docker and Kubernetes
 
+What Does the Application Do?
+Registration and Login: Users can register and log in to access the dashboard.
+Transaction Management: Once logged in, users can add income and expenses via the backend and view them in a graphical representation.
+Dashboard: After logging in, users can see their financial data visualized using Chart.js.
+
+Expected Output:
+Login Page: A form asking for username and password.
+Dashboard: A page displaying a financial chart of transactions with options to add income/expenses.
+
 ## Getting Started
 
 ###  Clone the repo
