@@ -1,0 +1,38 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - finance-net
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_HOST=postgres
+    depends_on:
+      - postgres
+    networks:
+      - finance-net
+
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: your_db_user
+      POSTGRES_PASSWORD: your_db_password
+      POSTGRES_DB: personal_finance_db
+    volumes:
+      - ./backend/transaction.sql:/docker-entrypoint-initdb.d/transaction.sql
+    networks:
+      - finance-net
+
+networks:
+  finance-net:
+    driver: bridge
