@@ -11,7 +11,7 @@ A full-stack personal finance dashboard built with React, Node.js, PostgreSQL, D
 
 ## Getting Started
 
-### 1. Clone the repo
+###  Clone the repo
 ```bash
 git clone https://github.com/dhamsrishti/personal-finance-dashboard.git
 
